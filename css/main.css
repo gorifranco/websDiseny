@@ -1,0 +1,31 @@
+
+body{
+margin: auto;
+}
+header{
+
+}
+#topBar{
+    margin: 0;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    background-color: #1B2631;
+    max-height: 35px;
+}
+
+.text-white{
+    color: white;
+}
+.text-center{
+    text-align: center;
+}
+
+#imatgeHeader{
+    width: 100vw;
+    height: 60vh;
+    object-fit: cover;
+    object-position: center 25%;
+    filter: brightness(0.8);
+}
