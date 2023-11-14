@@ -25,3 +25,13 @@
     margin-right: 0;
     margin-left: 0;
 }
+.vw-100{
+width: 100vw;
+   }
+.columns-2{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+.col2\/2{
+grid-column: 2;
+}

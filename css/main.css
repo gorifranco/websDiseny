@@ -1,11 +1,46 @@
-
+@font-face {
+    font-family: Gilda;
+    src: url("../fonts/GildaDisplay-Regular.ttf");
+}
+@font-face {
+    font-family: lexend;
+    src: url("../fonts/Lexend-VariableFont_wght.ttf");
+}
 body{
+    overflow-x: hidden;
 margin: auto;
 background-color: white;
     font-family: Arial, serif;
+
 }
 header{
 
+}
+h1{
+display: block;
+    font-family: Gilda, Arial, serif;
+    font-weight: 300;
+    line-height: 1.5em;
+    font-size: 6em;
+}
+h2{
+    font-family: Gilda, Arial, serif;
+    font-weight: 300;
+    line-height: 1.5em;
+    font-size: 3em;
+    color: #056FAB;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+p, a{
+    font-size: 13pt;
+    letter-spacing: 2px;
+    font-family: lexend, Arial, serif;
+
+}
+
+a{
+    text-decoration: none;
 }
 #topBar{
     margin: 0;
@@ -28,8 +63,7 @@ header{
     object-fit: cover;
     object-position: center 25%;
     filter: brightness(0.8);
-    margin-bottom: 0;
-    padding-bottom: 0;
+
 }
 #divNav {
     width: 100vw;
@@ -54,7 +88,6 @@ nav {
     border-top-style: solid;
 }
 
-
 .navItem {
     text-align: center;
     display: flex;
@@ -65,4 +98,55 @@ nav {
 }
 .logoNav{
     height: 8vh;
+}
+#titol{
+    position: absolute;
+    z-index: 15;
+    bottom: 2vh;
+}
+.divTitol{
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section{
+    position: relative;
+    display: block;
+    width: 100vw;
+    height: fit-content;
+    margin: 5rem auto;
+    max-width: 100vw;
+}
+.section-container{
+    box-sizing: border-box;
+    display: grid;
+}
+.text1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   padding-top: 2%;
+    margin-left: 20%;
+}
+.estrelles{
+    display: inline-block;
+    width: 10rem;
+}
+.imatge1{
+    width: 70%;
+    height: 450px;
+    object-fit: cover;
+}
+.boto1{
+    padding: 15px;
+    background-color: cornflowerblue;
+    position: relative;
+    top: 5%;
+    left: 5%;
+
+}
+.boto1 > a{
+    color: white;
 }
