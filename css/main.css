@@ -6,16 +6,40 @@
     font-family: lexend;
     src: url("../fonts/Lexend-VariableFont_wght.ttf");
 }
+@font-face {
+    font-family: work_sans;
+    src: url("../fonts/WorkSans-VariableFont_wght.ttf");
+}
+
+@keyframes aparecer_d-i {
+    from {
+        opacity: 0; /* Empiezan con opacidad cero */
+        transform: translateX(-100px); /* Desplazamiento inicial fuera del área visible */
+    }
+    to {
+        opacity: 1; /* Terminan con opacidad completa */
+        transform: translateX(0); /* Sin desplazamiento horizontal */
+    }
+}
+@keyframes aparecer_b-a {
+    from {
+        opacity: 0; /* Empiezan con opacidad cero */
+        transform: translateY(-100px); /* Desplazamiento inicial fuera del área visible */
+    }
+    to {
+        opacity: 1; /* Terminan con opacidad completa */
+        transform: translateY(0); /* Sin desplazamiento horizontal */
+    }
+}
+
+
 body{
     overflow-x: hidden;
-margin: auto;
-background-color: white;
+    margin: auto;
+    background-color: white;
     font-family: Arial, serif;
-
 }
-header{
 
-}
 h1{
 display: block;
     font-family: Gilda, Arial, serif;
@@ -31,6 +55,12 @@ h2{
     color: #056FAB;
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+h3{
+    font-family: Gilda, Arial, serif;
+    font-weight: 300;
+    line-height: 1.5em;
+    font-size: 1.5em;
 }
 p, a{
     font-size: 13pt;
@@ -58,18 +88,81 @@ a{
 }
 
 #imatgeHeader{
+    background-image: url("../img/img_header.webp");
+    background-size: cover;
     width: 100vw;
-    height: 60vh;
-    object-fit: cover;
-    object-position: center 25%;
-    filter: brightness(0.8);
+    height: 550px;
+    padding-top: 10%;
+    position: relative;
+}
+#imatgeHeader::before{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.1);
+    content: "";
+}
+.divHeader1{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    min-height: 400px;
 
 }
+
+.form_reserves >input, .form_reserves >select, .form_reserves >button{
+    font-family: work_sans, serif;
+    color: black;
+    background-color: white;
+    height: 40px;
+    margin: 10px;
+    padding: 0 10px;
+    z-index: 3;
+    border-radius: 5px;
+    letter-spacing: 1px;
+
+    border: none white;
+    -webkit-user-select: none; /* for button */
+    -webkit-appearance: button; /* for input */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    outline:none;
+}
+.form_reserves{
+    margin-bottom: 25px;
+}
+.form_reserves >button:hover{
+    background-color: cornflowerblue;
+    color: white;
+
+}
+
+.form_reserves >button{
+    padding: 0 20px;
+    background-color: #b7cbef;
+    color: black;
+    font-weight: 550;
+    font-size: 1em;
+}
+.divheader2{
+    padding: 0 40px;
+    background-color: rgba(19,69,79,.5);
+    border: 3px solid #1B2631;
+}
+
 #divNav {
+
     width: 100vw;
     height: 10vh;
     margin-top: 10px;
     margin-bottom: 10px;
+    overflow-y: hidden;
+    animation: aparecer_b-a 1s forwards;
 }
 
 nav {
@@ -100,16 +193,7 @@ nav {
     height: 8vh;
 }
 #titol{
-    position: absolute;
-    z-index: 15;
-    bottom: 2vh;
-}
-.divTitol{
-    position: relative;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+margin-bottom: 0;
 }
 section{
     position: relative;
@@ -140,13 +224,46 @@ section{
     object-fit: cover;
 }
 .boto1{
-    padding: 15px;
+    padding: 1rem 3rem;
     background-color: cornflowerblue;
     position: relative;
     top: 5%;
     left: 5%;
-
+    font-size: 1em;
+    letter-spacing: 2px;
 }
 .boto1 > a{
     color: white;
+    font-family: work_sans, serif;
+    font-weight: 350;
+}
+.section2{
+    margin-top: 3rem;
+    background-color: #f5f6fa;
+    margin-bottom: 10rem;
+}
+.s2{
+ max-width: 1300px;
+    margin-top: 3rem;
+    white-space: nowrap; /* Evita que las imágenes se desplacen a una nueva línea */
+    overflow: hidden; /* Oculta el desbordamiento de las imágenes fuera del contenedor */
+
+}
+.s2 img{
+    display: inline-block; /* Hace que las imágenes sean elementos en línea */
+    opacity: 0; /* Empiezan con opacidad cero para luego hacer la transición */
+/* Animación de aparición durante 1 segundo */
+}
+#roomTour{
+    padding: 1rem 3rem;
+    border-color: cornflowerblue;
+    background-color: cornflowerblue;
+    color: white;
+    font-family: work_sans, serif;
+    font-size: 1em;
+    letter-spacing: 2px;
+    font-weight: 350;
+}
+#romTour_div{
+    margin-top: 25px;
 }

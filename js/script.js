@@ -1,20 +1,44 @@
+document.addEventListener('DOMContentLoaded', lazyLoad);
 window.onload = () => {
     let image = document.getElementById('imatgeHeader');
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         let scrollPercentage = document.documentElement.scrollTop / (document.documentElement.scrollHeight - window.innerHeight);
-
-        if (isNaN(scrollPercentage)) {
-            console.error("Error: scrollPercentage es NaN");
-            console.log("document.documentElement.scrollTop:", document.documentElement.scrollTop);
-            console.log("document.documentElement.scrollHeight:", document.documentElement.scrollHeight);
-            console.log("window.innerHeight:", window.innerHeight);
-        } else {
-            let luminosity = 90 - scrollPercentage * 60;
-            console.log("scrollPercentage:", scrollPercentage);
-            console.log("luminosity:", luminosity);
-
+        if (scrollPercentage < 0.25) image.style.filter = 'brightness(' + 100 + '%)';
+        if (scrollPercentage > 0.25) {
+            let luminosity = 100 - (scrollPercentage - 0.25) * 200;
             image.style.filter = 'brightness(' + luminosity + '%)';
         }
     });
+}
+
+function lazyLoad() {
+    const lazyImages = document.getElementsByClassName('lazyLoad');
+
+    const inView = (changesArray) => {
+        changesArray.forEach((change) => {
+            if (change.isIntersecting) {
+                const targetImage = change.target;
+                console.log(targetImage.src)
+                targetImage.style.animation = "aparecer_d-i 1s forwards";
+            }
+        });
+    };
+
+    const config = {
+
+        rootMargin: '0px', // Margen cero
+        threshold: 0.5 // Carga cuando el 20% de la imagen está visible
+    };
+
+    const observer = new IntersectionObserver(inView, config);
+
+
+    for (let lazyImage of lazyImages) {
+        observer.observe(lazyImage)
+
+    }
+    // lazyImages.forEach((image) => {
+    //     observer.observe(image);
+    // });
 }
