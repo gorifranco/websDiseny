@@ -13,14 +13,19 @@ window.onload = () => {
 }
 
 function lazyLoad() {
-    const lazyImages = document.getElementsByClassName('lazyLoad');
+    const lazyImages = document.getElementsByTagName("img");
 
     const inView = (changesArray) => {
         changesArray.forEach((change) => {
             if (change.isIntersecting) {
                 const targetImage = change.target;
-                console.log(targetImage.src)
-                targetImage.style.animation = "aparecer_d-i 1s forwards";
+                console.log(change)
+                if (targetImage.className === "imatge2") {
+                    targetImage.style.animation = "aparecer_i-d 1s forwards";
+                }
+                if (targetImage.className === "imatge1") {
+                    targetImage.style.animation = "aparecer_d-i 1s forwards";
+                }
             }
         });
     };
@@ -38,7 +43,4 @@ function lazyLoad() {
         observer.observe(lazyImage)
 
     }
-    // lazyImages.forEach((image) => {
-    //     observer.observe(image);
-    // });
 }
