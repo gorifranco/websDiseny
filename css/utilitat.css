@@ -35,15 +35,9 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
 }
-
-.col1 {
-    grid-column: 1;
+.display-flex{
+    display: flex;
 }
-
-.col2 {
-    grid-column: 2;
-}
-
-.col3 {
-    grid-column: 3;
+.justify-center{
+    justify-content: center;
 }

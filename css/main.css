@@ -51,12 +51,16 @@
     100% { opacity: 1; }
 }
 
+html{
+    height: calc(100% - 30px);
+}
 
 body {
     overflow-x: hidden;
     margin: auto;
     background-color: white;
     font-family: Arial, serif;
+
 }
 
 h1 {
@@ -84,6 +88,12 @@ h3 {
     font-size: 1.5em;
 }
 
+h4 {
+    font-family: Gilda, Arial, serif;
+    font-weight: 500;
+    line-height: 1.5em;
+    font-size: 1.7em;
+}
 p, a {
     font-size: 13pt;
     letter-spacing: 2px;
@@ -153,8 +163,8 @@ a {
     letter-spacing: 1px;
 
     border: none white;
-    -webkit-user-select: none; /* for button */
-    -webkit-appearance: button; /* for input */
+    -webkit-user-select: none;
+    -webkit-appearance: button;
     -moz-user-select: none;
     -ms-user-select: none;
     outline: none;
@@ -162,12 +172,12 @@ a {
 
 .form_reserves {
     margin-bottom: 25px;
+
 }
 
 .form_reserves > button:hover {
     background-color: cornflowerblue;
     color: white;
-
 }
 
 .form_reserves > button {
@@ -176,6 +186,7 @@ a {
     color: black;
     font-weight: 550;
     font-size: 1em;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .divheader2 {
@@ -208,15 +219,39 @@ nav {
     border-bottom-width: thin;
     border-bottom-style: solid;
     border-top-style: solid;
+    min-width: 960px;
+}
+@media screen and (max-width: 1000px){
+ nav img{
+     display: none;
+ }
+    nav{
+        grid-template-columns: repeat(4, 1fr);
+        min-width: auto;
+        width: 95%;
+        height: 75px;
+    }
+    #divNav{
+        margin-bottom: 0;
+        height: 80px;
+    }
+
 }
 
 .navItem {
     text-align: center;
     display: flex;
     align-items: center;
-    padding: 10px;
     margin-right: auto;
     margin-left: auto;
+    padding: 10px 10px 0;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom-color 0.4s ease-in-out;
+}
+
+.navItem:hover {
+    border-bottom: 3px solid #056FAB;
+
 }
 
 .logoNav {
@@ -238,15 +273,55 @@ section {
 
 .section-container {
     box-sizing: border-box;
+}
+.section1{
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5%;
+}
+.s1{
+    margin:auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+@media screen and (max-width: 1300px){
+    .section1{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .section1 div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .text1{
+       margin: auto;
+    }
 }
 
+.section2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 1200px){
+    .section2{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+
+
 .text1 {
+    max-width: 720px;
+    margin-left: 6px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding-top: 2%;
-    margin-left: 20%;
+    font-size: 1rem;
 }
 
 .estrelles {
@@ -255,7 +330,7 @@ section {
 }
 
 .imatge1 {
-    width: 70%;
+    width: 720px;
     height: 450px;
     object-fit: cover;
     opacity: 0;
@@ -264,11 +339,14 @@ section {
 .boto1 {
     padding: 1rem 3rem;
     background-color: cornflowerblue;
-    position: relative;
-    top: 5%;
-    left: 5%;
+
     font-size: 1em;
     letter-spacing: 2px;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.boto1:hover{
+    background-color: #3a5878;
+    transform: scale(1.1);
 }
 
 .boto1 > a {
@@ -279,8 +357,7 @@ section {
 
 .section2 {
     margin-top: 3rem;
-    background-color: #f5f6fa;
-    margin-bottom: 10rem;
+    margin-bottom: 2rem;
 }
 
 .s2 {
@@ -297,17 +374,67 @@ section {
     /* Animación de aparición durante 1 segundo */
 }
 
-#roomTour {
-    padding: 1rem 3rem;
-    border-color: cornflowerblue;
-    background-color: cornflowerblue;
+#roomTour{
     color: white;
-    font-family: work_sans, serif;
-    font-size: 1em;
-    letter-spacing: 2px;
-    font-weight: 350;
 }
 
 #romTour_div {
     margin-top: 25px;
+    padding: 1rem 3rem;
+    width: 160px;
+    text-align: center;
+    border-color: cornflowerblue;
+    background-color: cornflowerblue;
+    font-family: work_sans, serif;
+    font-size: 1em;
+    letter-spacing: 2px;
+    font-weight: 350;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+#romTour_div:hover{
+    background-color: #3a5878;
+    transform: scale(1.1);
+}
+
+footer{
+    color: white;
+    font-family: Gilda, serif;
+    background-color: #303030;
+    background-size: cover;
+    display: flex;
+    margin-bottom: 0;
+    padding-top: 4em;
+    padding-bottom: 4em;
+
+}
+.f1{
+    margin: auto;
+
+}
+.f2{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 10%;
+    max-width: 1300px;
+    display: grid;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #ddd;
+    vertical-align: top;
+}
+footer img{
+    width: 20px;
+    height: 20px;
+    margin-left: 7px;
+    margin-top: 4px;
+}
+.itemBot{
+    display: flex;
+}
+footer p{
+    margin-top: 4px;
+    margin-left: 5px;
+}
+footer hr{
+    margin-bottom: 4em;
 }
