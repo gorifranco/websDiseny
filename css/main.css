@@ -1,18 +1,3 @@
-@font-face {
-    font-family: Gilda;
-    src: url("../fonts/GildaDisplay-Regular.ttf");
-}
-
-@font-face {
-    font-family: lexend;
-    src: url("../fonts/Lexend-VariableFont_wght.ttf");
-}
-
-@font-face {
-    font-family: work_sans;
-    src: url("../fonts/WorkSans-VariableFont_wght.ttf");
-}
-
 @keyframes aparecer_d-i {
     from {
         opacity: 0; /* Empiezan con opacidad cero */
@@ -50,27 +35,6 @@
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
-
-html{
-    height: calc(100% - 30px);
-}
-
-body {
-    overflow-x: hidden;
-    margin: auto;
-    background-color: white;
-    font-family: Arial, serif;
-
-}
-
-h1 {
-    display: block;
-    font-family: Gilda, Arial, serif;
-    font-weight: 300;
-    line-height: 1.5em;
-    font-size: 6em;
-}
-
 h2 {
     font-family: Gilda, Arial, serif;
     font-weight: 300;
@@ -94,33 +58,6 @@ h4 {
     line-height: 1.5em;
     font-size: 1.7em;
 }
-p, a {
-    font-size: 13pt;
-    letter-spacing: 2px;
-    font-family: lexend, Arial, serif;
-
-}
-
-a {
-    text-decoration: none;
-}
-
-#topBar {
-    margin: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    position: relative;
-    top: 0;
-    width: 100%;
-    background-color: #1B2631;
-    max-height: 30px;
-    z-index: 5;
-}
-
-#iconaTel {
-    height: 15px;
-}
-
 #imatgeHeader {
     background-image: url("../img/img_header.webp");
     background-size: cover;
@@ -129,7 +66,6 @@ a {
     padding-top: 10%;
     position: relative;
 }
-
 #imatgeHeader::before {
     position: absolute;
     top: 0;
@@ -138,17 +74,6 @@ a {
     right: 0;
     background-color: rgba(0, 0, 0, .1);
     content: "";
-}
-
-.divHeader1 {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    min-height: 400px;
-
 }
 
 .form_reserves > input, .form_reserves > select, .form_reserves > button {
@@ -187,79 +112,6 @@ a {
     font-weight: 550;
     font-size: 1em;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-}
-
-.divheader2 {
-    padding: 0 40px;
-    background-color: rgba(19, 69, 79, .5);
-    border: 3px solid #1B2631;
-    animation: fadeIn 1s;
-}
-
-#divNav {
-
-    width: 100vw;
-    height: 10vh;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    animation: aparecer_b-a 1s forwards;
-}
-
-nav {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 50%;
-    margin: auto;
-    border-bottom: cornflowerblue;
-    border-top: cornflowerblue;
-    border-top-width: thin;
-    border-bottom-width: thin;
-    border-bottom-style: solid;
-    border-top-style: solid;
-    min-width: 960px;
-}
-@media screen and (max-width: 1000px){
- nav img{
-     display: none;
- }
-    nav{
-        grid-template-columns: repeat(4, 1fr);
-        min-width: auto;
-        width: 95%;
-        height: 75px;
-    }
-    #divNav{
-        margin-bottom: 0;
-        height: 80px;
-    }
-
-}
-
-.navItem {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 10px 10px 0;
-    border-bottom: 3px solid transparent;
-    transition: border-bottom-color 0.4s ease-in-out;
-}
-
-.navItem:hover {
-    border-bottom: 3px solid #056FAB;
-
-}
-
-.logoNav {
-    height: 8vh;
-}
-
-#titol {
-    margin-bottom: 0;
 }
 
 section {
@@ -315,7 +167,7 @@ section {
 
 
 .text1 {
-    max-width: 720px;
+    max-width: 650px;
     margin-left: 6px;
     display: flex;
     flex-direction: column;
@@ -330,7 +182,7 @@ section {
 }
 
 .imatge1 {
-    width: 720px;
+    width: 650px;
     height: 450px;
     object-fit: cover;
     opacity: 0;
@@ -394,47 +246,4 @@ section {
 #romTour_div:hover{
     background-color: #3a5878;
     transform: scale(1.1);
-}
-
-footer{
-    color: white;
-    font-family: Gilda, serif;
-    background-color: #303030;
-    background-size: cover;
-    display: flex;
-    margin-bottom: 0;
-    padding-top: 4em;
-    padding-bottom: 4em;
-
-}
-.f1{
-    margin: auto;
-
-}
-.f2{
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 10%;
-    max-width: 1300px;
-    display: grid;
-    margin-left: 10px;
-    margin-right: 10px;
-    color: #ddd;
-    vertical-align: top;
-}
-footer img{
-    width: 20px;
-    height: 20px;
-    margin-left: 7px;
-    margin-top: 4px;
-}
-.itemBot{
-    display: flex;
-}
-footer p{
-    margin-top: 4px;
-    margin-left: 5px;
-}
-footer hr{
-    margin-bottom: 4em;
 }

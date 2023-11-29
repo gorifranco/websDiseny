@@ -4,11 +4,10 @@ window.onload = () => {
 
     window.addEventListener('scroll', function () {
         let scrollPercentage = document.documentElement.scrollTop / (document.documentElement.scrollHeight - window.innerHeight);
-        if (scrollPercentage < 0.25) image.style.filter = 'brightness(' + 100 + '%)';
-        if (scrollPercentage > 0.25) {
-            let luminosity = 100 - (scrollPercentage - 0.25) * 200;
+
+            let luminosity = 100 - (scrollPercentage) * 200;
             image.style.filter = 'brightness(' + luminosity + '%)';
-        }
+
     });
 }
 
@@ -38,9 +37,7 @@ function lazyLoad() {
 
     const observer = new IntersectionObserver(inView, config);
 
-
     for (let lazyImage of lazyImages) {
         observer.observe(lazyImage)
-
     }
 }
