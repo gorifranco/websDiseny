@@ -70,12 +70,10 @@ a {
     align-items: center;
     text-align: center;
     width: 100%;
-    min-height: 400px;
-
 }
 
 .divheader2 {
-    padding: 0 40px;
+    padding: 0 40px 25px;
     background-color: rgba(19, 69, 79, .5);
     border: 3px solid #1B2631;
     animation: fadeIn 1s;
