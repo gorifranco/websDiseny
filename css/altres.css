@@ -1,16 +1,17 @@
+footer{
+    margin-top: 60px;
+}
 #sec1{
     display: grid;
     width: 1205px;
     grid-template-columns: repeat(4, 300px);
     grid-template-rows: repeat(6, 300px);
     grid-gap: 1px;
-    overflow: hidden;
 }
 #sec1 img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
 #sec1 .gridItem:first-child, .gridItem:nth-of-type(12){
 grid-row: span 2;
@@ -18,4 +19,110 @@ grid-row: span 2;
 
 #sec1 .gridItem:nth-of-type(6), .gridItem:nth-of-type(11),  .gridItem:nth-of-type(17){
     grid-column: span 2;
+}
+.gridItem{
+    position: relative;
+    overflow: hidden;
+}
+img{
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+img:hover{
+    transform: scale(1.2);
+    filter: brightness(0.7) blur(1px);
+}
+
+.gridItem::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+    font-size: 120%;
+    text-align: center;
+    color: white;
+}
+.gridItem:hover::after {
+    opacity: 1;
+}
+.gridItem:nth-of-type(1)::after {
+    content: "Hotel ca'n pep";
+}
+
+.gridItem:nth-of-type(2)::after {
+    content: "Hotel Mar Azul";
+}
+
+.gridItem:nth-of-type(3)::after {
+    content: "Hotel Paraíso";
+}
+
+.gridItem:nth-of-type(4)::after {
+    content: "Hotel Sol Radiante";
+}
+
+.gridItem:nth-of-type(5)::after {
+    content: "Hotel del Bosque";
+}
+
+.gridItem:nth-of-type(6)::after {
+    content: "Hotel Luna Serena";
+}
+
+.gridItem:nth-of-type(7)::after {
+    content: "Hotel Estrella del Mar";
+}
+
+.gridItem:nth-of-type(8)::after {
+    content: "Hotel Brisas del Este";
+}
+
+.gridItem:nth-of-type(9)::after {
+    content: "Hotel Montaña Azul";
+}
+
+.gridItem:nth-of-type(10)::after {
+    content: "Hotel Oasis Tropical";
+}
+
+.gridItem:nth-of-type(11)::after {
+    content: "Hotel Aurora";
+}
+
+.gridItem:nth-of-type(12)::after {
+    content: "Hotel Mariposa";
+}
+
+.gridItem:nth-of-type(13)::after {
+    content: "Hotel Dorado";
+}
+
+.gridItem:nth-of-type(14)::after {
+    content: "Hotel Playa Blanca";
+}
+
+.gridItem:nth-of-type(15)::after {
+    content: "Hotel Flor de la Bahía";
+}
+
+.gridItem:nth-of-type(16)::after {
+    content: "Hotel El Descanso";
+}
+
+.gridItem:nth-of-type(17)::after {
+    content: "Hotel Brisas del Norte";
+}
+
+.gridItem:nth-of-type(18)::after {
+    content: "Hotel Paraíso Dorado";
+}
+
+.gridItem:nth-of-type(19)::after {
+    content: "Hotel Sol Naciente";
+}
+
+.gridItem:nth-of-type(20)::after {
+    content: "Hotel Estrella del Sur";
 }

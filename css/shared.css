@@ -81,10 +81,10 @@ a {
 
 .divNav {
     width: 100vw;
-    height: 10vh;
+    height: 5vh;
     margin-top: 10px;
-    margin-bottom: 10px;
     animation: aparecer_b-a 1s forwards;
+    margin-bottom: 100px;
 }
 
 nav {
@@ -92,7 +92,6 @@ nav {
     grid-template-columns: repeat(5, 1fr);
     justify-content: center;
     align-items: center;
-    height: 100%;
     width: 50%;
     margin: auto;
     border-bottom: cornflowerblue;
