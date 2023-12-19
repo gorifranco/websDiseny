@@ -8,6 +8,35 @@ footer{
     grid-template-rows: repeat(6, 300px);
     grid-gap: 1px;
 }
+@media screen and (max-width: 1250px){
+    #sec1{
+        grid-template-columns: repeat(3, 300px);
+        grid-template-rows: repeat(8, 300px);
+        width: 905px;
+    }
+    #sec1 .gridItem:nth-of-type(17){
+        grid-column: span 1;
+    }
+    #sec1 .gridItem:nth-of-type(16){
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    #sec1{
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(12, 300px);
+        width: 605px;
+    }
+    #sec1 .gridItem:nth-of-type(16){
+        grid-column: span 1;
+    }
+    #sec1 .gridItem:nth-of-type(17){
+        grid-column: span 2;
+    }
+}
+
+
 #sec1 img{
     width: 100%;
     height: 100%;
@@ -24,10 +53,10 @@ grid-row: span 2;
     position: relative;
     overflow: hidden;
 }
-img{
+#sec1 img{
     transition: transform 0.5s ease, filter 0.5s ease;
 }
-img:hover{
+#sec1 img:hover{
     transform: scale(1.2);
     filter: brightness(0.7) blur(1px);
 }
@@ -126,3 +155,4 @@ img:hover{
 .gridItem:nth-of-type(20)::after {
     content: "Hotel Estrella del Sur";
 }
+

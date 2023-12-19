@@ -127,31 +127,36 @@
 
 @keyframes estrelles {
     0%{
+        opacity: 0.8;
+        margin-left: 5%;
+        margin-top: -5%;
+    }
+    10%{
         opacity: 0;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    60%{
+        opacity: 0;
+        margin-left: 20%;
+        margin-top: -20%;
     }
     70%{
-        opacity: 0;
-    }
-    80%{
         opacity: 1;
     }
     90%{
         opacity: 1;
-        margin-left: 0;
-        margin-top: 0;
     }
     100%{
-        opacity: 0;
+        opacity: 0.8;
+        margin-left: 5%;
+        margin-top: -5%;
     }
 
 }
 
 @keyframes pulse {
-    0% {box-shadow: 0 0 20px rgba(242, 239, 136, 0.4);}
-    50% {box-shadow: 0 0 40px rgba(242, 239, 136, 1);}
-    100% {box-shadow: 0 0 20px rgba(242, 239, 136, 0.4);}
-}
-@-webkit-keyframes pulse {
     0% {box-shadow: 0 0 20px rgba(242, 239, 136, 0.4);}
     50% {box-shadow: 0 0 40px rgba(242, 239, 136, 1);}
     100% {box-shadow: 0 0 20px rgba(242, 239, 136, 0.4);}
@@ -163,7 +168,7 @@
     text-align: center;
     background: #f1ede3;
     width: 100%;
-    height: 800px;
+    height: 500px;
     color: #555;
 }
 .time-circle {
@@ -255,11 +260,9 @@
     height: 16%;
 }
 .stars {
-    opacity: 0;
     margin-left: 100px;
     top: 0;
     left: 0;
-    z-index: 1000;
 }
 
 .stars div:nth-child(n) {
@@ -268,9 +271,10 @@
     border-radius: 70%;
     box-shadow: 0 0 15px rgba(255, 255, 255, 1);
     overflow: hidden;
-    width: 1%;
-    height: 1%;
-    z-index: 1000;
+    width: 3px;
+    height: 3px;
+    z-index: 3;
+    opacity: 0;
 
     margin-left: 20%;
     margin-top: -20%;
@@ -311,7 +315,7 @@
     width: 100%;
     height: 200px;
     top: 68%;
-    z-index: 3;
+    z-index: 4;
 }
 
 .terra2{
@@ -319,12 +323,12 @@
     width: 100%;
     height: 200px;
     top: 68%;
-    z-index: 3;
+    z-index: 4;
     animation: backgroundTerra 20s linear infinite;
 }
 .bicis{
     position: relative;
     bottom:25%;
     width: 100px;
-    z-index: 4;
+    z-index: 5;
 }
