@@ -1,0 +1,34 @@
+section:nth-of-type(even) {
+    background-color: #f1ede3;
+}
+
+
+section {
+    height: 700px;
+}
+
+#sec1 {
+    margin: 70px auto auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5%;
+    width: 80%;
+    height: 80%;
+}
+
+#carrouselImg {
+    width: 100%;
+    height: 100%;
+}
+
+#carrouselImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+#carrouselImg img:nth-of-type(1) {
+    display: flex;
+}
+

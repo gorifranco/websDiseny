@@ -5,8 +5,8 @@ window.onload = () => {
     window.addEventListener('scroll', function () {
         let scrollPercentage = document.documentElement.scrollTop / (document.documentElement.scrollHeight - window.innerHeight);
 
-            let luminosity = 100 - (scrollPercentage) * 200;
-            image.style.filter = 'brightness(' + luminosity + '%)';
+        let luminosity = 100 - (scrollPercentage) * 200;
+        image.style.filter = 'brightness(' + luminosity + '%)';
 
     });
 }
