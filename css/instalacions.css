@@ -1,8 +1,18 @@
 section:nth-of-type(even) {
     background-color: #f1ede3;
 }
+nav{
+    backdrop-filter: blur(10px);
+}
+h3{
+    font-family: Gilda, Arial, serif;
+    font-weight: 300;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
 .divNav{
-    height: 0px;
+    height: 0;
     margin-bottom: 0;
     margin-top: 0;
 }
@@ -39,3 +49,84 @@ section {
     display: flex;
 }
 
+#carrouselTxt{
+padding-top: 20%;
+}
+#carrouselTxt p{
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+section:nth-of-type(2), section:nth-of-type(3){
+    text-align: center;
+    padding-top: 30px;
+}
+section:nth-of-type(3){
+    height: 820px;
+}
+
+#haDeSerGrid{
+    padding-top: 30px;
+    display: grid;
+    width: 1170px;
+    margin: auto;
+    grid-template-columns: repeat(4, 270px);
+    grid-gap: 30px;
+}
+@media screen and (max-width: 1250px){
+    #haDeSerGrid{
+        width: 570px;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 270px);
+    }
+    section:nth-of-type(2){
+        height: 1250px;
+    }
+}
+.card{
+    background-color: white;
+    box-shadow: 0 0 8px;
+    border-radius: 10px;
+    width: 270px;
+    padding: 0;
+}
+.card p{
+    padding-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+table{
+    border-collapse: collapse;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid black;
+    font-size: 18pt;
+}
+td{
+    padding: 15px 30px 15px 30px;
+    text-align: center;
+}
+
+td div{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: solid black;
+    margin: auto;
+    box-shadow: 0 0 3px;
+}
+th{
+    padding: 28px 30px 28px 30px;
+
+}
+.obert{
+    background: radial-gradient(ellipse at center, lawngreen -5px,darkgreen 40px);
+}
+.tancat{
+    background: radial-gradient(ellipse at center, red 0,darkred 40px);
+}
+
+tbody tr:nth-of-type(odd){
+    background-color: lightgrey;
+}

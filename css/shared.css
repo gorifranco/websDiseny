@@ -31,6 +31,15 @@ h1 {
     line-height: 1.5em;
     font-size: 6em;
 }
+h2 , caption{
+    font-family: Gilda, Arial, serif;
+    font-weight: 300;
+    line-height: 1.5em;
+    font-size: 3em;
+    color: #056FAB;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 
 h4 {
     font-family: Gilda, Arial, serif;
