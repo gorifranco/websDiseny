@@ -198,12 +198,15 @@ section:nth-of-type(2) {
 }
 
 .imatge1 {
+    box-shadow: 0 0 5px;
     width: 650px;
     height: 450px;
     object-fit: cover;
     opacity: 0;
 }
-
+.imatge2{
+    box-shadow: 0 2px 5px;
+}
 .boto1 {
     padding: 1rem 3rem;
     background-color: cornflowerblue;

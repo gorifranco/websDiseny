@@ -7,7 +7,7 @@ window.onload = () => {
         if (!stick) {
             if (div.getBoundingClientRect().y < 20) {
                 div.style.position = "fixed";
-                div.style.top = "0"
+                div.style.top = "16px"
                 stick = true
             }
         } else {
